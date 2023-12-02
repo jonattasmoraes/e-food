@@ -9,7 +9,7 @@ import {
   Score,
   Title
 } from './styles'
-import star from '../../assets/images/estrela.svg'
+import star from '../../assets/images/star.svg'
 import { ButtonLink } from '../Button/styles'
 
 type Props = {
@@ -44,12 +44,9 @@ const CardHome = ({
         </Rating>
       </TitleContainer>
       <Description>{description}</Description>
-      <ButtonLink
-        to="/product"
-        type={'button'}
-        title={'Conheça nosso cardápio'}
-        children={'Saiba mais'}
-      />
+      <ButtonLink to="/teste" title={title}>
+        Saiba mais
+      </ButtonLink>
     </InfoContainer>
   </Card>
 )

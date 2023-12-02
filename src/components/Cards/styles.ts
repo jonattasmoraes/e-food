@@ -28,6 +28,7 @@ export const Title = styled.h3`
   color: ${colors.red};
   margin-top: 8px;
   display: block;
+  padding-right: 8px;
 `
 export const TitleContainer = styled.div`
   display: flex;
