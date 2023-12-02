@@ -1,12 +1,13 @@
-import Header from './components/Header'
-import { Globalcss } from './styles'
+import { BrowserRouter } from 'react-router-dom'
 
+import { GlobalCss } from './styles'
+import Rotas from './routs'
 function App() {
   return (
-    <>
-      <Globalcss />
-      <Header />
-    </>
+    <BrowserRouter>
+      <GlobalCss />
+      <Rotas />
+    </BrowserRouter>
   )
 }
 

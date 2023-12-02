@@ -1,28 +1,31 @@
 import { createGlobalStyle } from 'styled-components'
-import styled from 'styled-components'
 
 export const colors = {
-  red: '#E66767',
+  bgColor: '#F5F5F5',
+  white: '#FFF',
   orange: '#FFEBD9',
-  white: '#FFF'
+  red: '#E66767'
 }
 
-export const Globalcss = createGlobalStyle`
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
-    list-style: none;
-  }
+export const GlobalCss = createGlobalStyle`
+ *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+      list-style: none;
+      text-decoration: none;
+      overflow-x: hidden;
+ }
 
-  body {
-    background-color: #F5F5F5;
-  }
-`
+ body{
+      background: ${colors.bgColor};
+      color: ${colors.red};
+ }
 
-export const Container = styled.div`
+ .container {
   max-width: 1024px;
-  width: 100%;
   margin: 0 auto;
-`
+  width: 100%;
+}
+ `
