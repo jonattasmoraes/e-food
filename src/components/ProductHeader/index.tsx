@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 import { ProductContainer, HeaderContainer, ProductText } from './styles'
 import logo from '../../assets/images/logo.svg'
 
@@ -6,7 +8,9 @@ const ProductHeader = () => (
     <div className="container">
       <ProductContainer>
         <ProductText>Restaurantes</ProductText>
-        <img src={logo} alt="logo" />
+        <Link to={'/'}>
+          <img src={logo} alt="logo" />
+        </Link>
         <ProductText>0 produto(s) no carrinho</ProductText>
       </ProductContainer>
     </div>
