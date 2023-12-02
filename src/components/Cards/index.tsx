@@ -44,7 +44,7 @@ const CardHome = ({
         </Rating>
       </TitleContainer>
       <Description>{description}</Description>
-      <ButtonLink to="/teste" title={title}>
+      <ButtonLink to="/Menu" title={title}>
         Saiba mais
       </ButtonLink>
     </InfoContainer>

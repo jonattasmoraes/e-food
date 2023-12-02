@@ -1,15 +1,12 @@
 import styled from 'styled-components'
 
-import Vector from '../../assets/images/Vector.svg'
+import headerImage from '../../assets/images/fundo.png'
 
 export const HeaderContainer = styled.header`
-  top: -23px;
-  background-image: url(${Vector});
-  max-width: 2032px;
+  background-image: url(${headerImage});
   width: 100%;
   height: 186px;
-  background-color: #e667670d;
-  overflow-y: hidden;
+  background-size: auto 100%;
 
   img {
     margin-top: 63px;

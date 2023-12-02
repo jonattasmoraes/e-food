@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+
 import { colors } from '../../styles'
 
 export const Banner = styled.div`
@@ -18,7 +19,7 @@ export const Banner = styled.div`
     position: absolute;
     top: 0;
     left: 0;
-    opacity: 0.50;
+    opacity: 0.5;
   }
 
   .container {
@@ -33,7 +34,6 @@ export const Banner = styled.div`
 `
 
 export const Infos = styled.div`
-
   h2 {
     font-size: 32px;
     font-weight: 900;

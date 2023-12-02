@@ -12,13 +12,9 @@ const Products = ({ title, description, image }: Props) => (
     <img src={image} alt={title} />
     <Title>{title}</Title>
     <Description>{description}</Description>
-    <Button
-      variant="secundary"
-      to="/product"
-      type={'button'}
-      title={'Clique para adicionar ao carrinho'}
-      children={'Adicionar ao carrinho'}
-    />
+    <Button type={'button'} title={''} to={'/teste'}>
+      Adicionar ao carrinho
+    </Button>
   </Card>
 )
 
