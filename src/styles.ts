@@ -8,24 +8,22 @@ export const colors = {
 }
 
 export const GlobalCss = createGlobalStyle`
- *{
+  *{
       margin: 0;
       padding: 0;
       box-sizing: border-box;
       font-family: 'Roboto', sans-serif;
       list-style: none;
       text-decoration: none;
-      overflow-x: hidden;
- }
+  }
 
- body{
+  body{
       background: ${colors.bgColor};
-      color: ${colors.red};
- }
+  }
 
- .container {
+    .container {
   max-width: 1024px;
   margin: 0 auto;
   width: 100%;
 }
- `
+`

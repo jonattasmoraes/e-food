@@ -1,5 +1,5 @@
 import ProductsTypes from '../../models/ProductsItem'
-import Products from '../Products'
+import Products from '../Product'
 import { Title } from '../Cards/styles'
 import { List, ListContainer } from './styles'
 
