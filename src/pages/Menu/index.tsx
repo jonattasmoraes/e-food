@@ -1,9 +1,8 @@
-import ProductHeader from '../../components/ProductHeader'
 import ProductHero from '../../components/ProductHero'
 import ProductsTypes from '../../models/ProductsItem'
 import pizza from '../../assets/images/pizza.png'
 import ProductList from '../../components/ProductsList'
-import Footer from '../../components/Footer'
+import ProductHeader from '../../components/ProductHeader'
 const menuItens: ProductsTypes[] = [
   {
     id: 1,
@@ -53,7 +52,6 @@ const ProductMenu = () => (
     <ProductHeader />
     <ProductHero />
     <ProductList types={menuItens} title="" />
-    <Footer />
   </>
 )
 

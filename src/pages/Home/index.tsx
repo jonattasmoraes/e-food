@@ -4,7 +4,6 @@ import italian from '../../assets/images/italy.png'
 import japonese from '../../assets/images/sushi.png'
 import star from '../../assets/images/star.svg'
 import Header from '../../components/Header'
-import Footer from '../../components/Footer'
 
 const menu: FoodTypes[] = [
   {
@@ -78,7 +77,6 @@ const Home = () => (
   <>
     <Header />
     <CardsList types={menu} title="" />
-    <Footer />
   </>
 )
 
