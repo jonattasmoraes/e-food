@@ -13,38 +13,45 @@ import star from '../../assets/images/star.svg'
 import { ButtonLink } from '../Button/styles'
 
 type Props = {
-  title: string
-  category: string
-  score: string
-  description: string
-  info: string
-  image: string
+  titulo: string
+  destacado: boolean
+  tipo: string
+  avaliacao: string
+  descricao: string
+  capa: string
+}
+
+const renderDestaqueTag = (destacado: boolean | undefined) => {
+  if (destacado === true) {
+    return <Tag>Destaques da Semana</Tag>
+  }
+  return null
 }
 
 const CardHome = ({
-  title,
-  category,
-  score,
-  description,
-  info,
-  image
+  titulo,
+  destacado,
+  tipo,
+  avaliacao,
+  descricao,
+  capa
 }: Props) => (
   <Card>
-    <img src={image} alt={title} />
+    <img src={capa} alt={titulo} />
     <Info>
-      {info.length > 0 && <Tag>{info}</Tag>}
-      <Tag>{category}</Tag>
+      {renderDestaqueTag(destacado)}
+      <Tag>{tipo}</Tag>
     </Info>
     <InfoContainer>
       <TitleContainer>
-        <Title>{title}</Title>
+        <Title>{titulo}</Title>
         <Rating>
-          <Score>{score}</Score>
+          <Score>{avaliacao}</Score>
           <img src={star} alt="Estrela Score" />
         </Rating>
       </TitleContainer>
-      <Description>{description}</Description>
-      <ButtonLink to="/Menu" title={title}>
+      <Description>{descricao}</Description>
+      <ButtonLink to="/Menu" title={titulo}>
         Saiba mais
       </ButtonLink>
     </InfoContainer>
