@@ -28,6 +28,10 @@ const Home = () => {
       .then((response) => setMenu(response))
   }, [])
 
+  if (!menu) {
+    return <h3>Carregando...</h3>
+  }
+
   return (
     <>
       <Header />
@@ -37,4 +41,3 @@ const Home = () => {
 }
 
 export default Home
-.
