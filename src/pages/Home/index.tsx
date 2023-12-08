@@ -2,22 +2,24 @@ import { useEffect, useState } from 'react'
 import CardsList from '../../components/CardsList'
 import Header from '../../components/Header'
 
-export type Foods = {
+type MenuItem = {
+  foto: string
+  preco: number
+  id: number
+  nome: string
+  descricao: string
+  porcao: string
+}
+
+type Restaurants = {
   id: number
   titulo: string
   destacado: boolean
   tipo: string
-  avaliacao: string
+  avaliacao: number
   descricao: string
   capa: string
-  cardapio: {
-    foto: string
-    preco: number
-    id: number
-    nome: string
-    descricao: string
-    porcao: string
-  }
+  cardapio: MenuItem[]
 }
 
 const Home = () => {
