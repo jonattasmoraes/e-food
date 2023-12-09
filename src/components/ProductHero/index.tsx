@@ -1,16 +1,17 @@
 import { useEffect, useState } from 'react'
 import { Banner, Infos } from './styles'
-
-import { Foods } from '../../pages/Home'
+import { Restaurants } from '../../pages/home'
+import { useParams } from 'react-router-dom'
 
 const ProductHero = () => {
-  const [food, setFood] = useState<Foods>()
+  const { id } = useParams()
+  const [food, setFood] = useState<Restaurants>()
 
   useEffect(() => {
-    fetch('https://fake-api-tau.vercel.app/api/efood/restaurantes/1')
+    fetch(`https://fake-api-tau.vercel.app/api/efood/restaurantes/${id}`)
       .then((response) => response.json())
       .then((response) => setFood(response))
-  }, [])
+  }, [id])
 
   return (
     <Banner style={{ backgroundImage: `url(${food?.capa})` }}>

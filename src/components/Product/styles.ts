@@ -68,6 +68,8 @@ export const ModalContainer = styled.div`
 export const ModalImage = styled.img`
   width: 280px;
   height: 280px;
+  object-fit: cover;
+  object-position: center;
 `
 
 export const ModalContent = styled.div`
