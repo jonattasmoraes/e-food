@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom'
 import headerImage from '../../assets/images/fundo.png'
 import logo from '../../assets/images/logo.svg'
 import { Image, Title } from './styles'
@@ -6,9 +5,7 @@ import { Image, Title } from './styles'
 const Header = () => (
   <Image style={{ backgroundImage: `url(${headerImage})` }}>
     <div>
-      <Link to={'/'}>
-        <img src={logo} alt="logo" />
-      </Link>
+      <img src={logo} alt="logo" />
     </div>
     <Title>
       Viva experiências gastronômicas <br />

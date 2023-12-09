@@ -7,10 +7,10 @@ const ProductHeader = () => (
   <HeaderContainer>
     <div className="container">
       <ProductContainer>
-        <ProductText>Restaurantes</ProductText>
         <Link to={'/'}>
-          <img src={logo} alt="logo" />
+          <ProductText>Restaurantes</ProductText>
         </Link>
+        <img src={logo} alt="logo" />
         <ProductText>0 produto(s) no carrinho</ProductText>
       </ProductContainer>
     </div>
