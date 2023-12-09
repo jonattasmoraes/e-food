@@ -1,7 +1,7 @@
 import Products from '../Product'
 import { List, ListContainer } from './styles'
 
-import { Restaurants } from '../../pages/home'
+import { Restaurants } from '../../../../pages/home'
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 

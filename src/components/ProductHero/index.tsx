@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Banner, Infos } from './styles'
-import { Restaurants } from '../../pages/home'
+import { Restaurants } from '../../../../pages/home'
 import { useParams } from 'react-router-dom'
 
 const ProductHero = () => {
