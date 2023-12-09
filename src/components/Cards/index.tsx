@@ -11,7 +11,7 @@ import {
 } from './styles'
 import star from '../../assets/images/star.svg'
 import { ButtonLink } from '../Button/styles'
-import { Restaurants } from '../../../../pages/home'
+import { Restaurants } from '../../pages/home'
 
 import { getDescription } from '../Product'
 

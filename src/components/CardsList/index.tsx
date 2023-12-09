@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Restaurants } from '../../../../pages/home'
+import { Restaurants } from '../../pages/home'
 import CardHome from '../Cards'
 import { List, ListContainer } from './styles'
 
