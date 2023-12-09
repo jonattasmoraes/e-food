@@ -8,7 +8,7 @@ const ProductHeader = () => (
     <div className="container">
       <ProductContainer>
         <Link to={'/'}>
-          <ProductText>Restaurantes</ProductText>
+          <ProductText className="link">Restaurantes</ProductText>
         </Link>
         <img src={logo} alt="logo" />
         <ProductText>0 produto(s) no carrinho</ProductText>

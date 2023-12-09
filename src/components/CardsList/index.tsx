@@ -11,10 +11,6 @@ const CardsList = () => {
       .then((response) => setRestaurants(response))
   }, [])
 
-  if (!restaurants) {
-    return <h3>Carregando...</h3>
-  }
-
   return (
     <>
       <div className="container">

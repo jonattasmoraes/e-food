@@ -11,15 +11,18 @@ export const HeaderContainer = styled.header`
   img {
     margin-top: 63px;
   }
+
+  .link {
+    cursor: pointer;
+    color: #000000;
+  }
 `
 
 export const ProductText = styled.p`
-  color: #000000;
   font-size: 18px;
   font-weight: 900;
   line-height: 21px;
   margin-top: 82px;
-  cursor: pointer;
 `
 export const ProductContainer = styled.div`
   display: flex;
