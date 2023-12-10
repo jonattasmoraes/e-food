@@ -1,3 +1,4 @@
+import { useDispatch } from 'react-redux'
 import {
   Card,
   CloseButton,
@@ -12,12 +13,12 @@ import Button from '../Button'
 import closeImg from '../../assets/images/close.png'
 import { useState } from 'react'
 
+import { add, open } from '../../store/reducers/cart'
+import { MenuItem, Restaurants } from '../../pages/Home'
+
 type Props = {
-  foto: string
-  preco: number
-  nome: string
-  descricao: string
-  porcao: string
+  restaurant: MenuItem
+  restaurants: Restaurants
 }
 
 export const formatPrice = (price = 0) => {
@@ -33,15 +34,22 @@ export const getDescription = (description: string) => {
   }
 }
 
-const Products = ({ foto, preco, nome, descricao, porcao }: Props) => {
+const Products = ({ restaurant, restaurants }: Props) => {
+  const dispatch = useDispatch()
+
+  const addCart = () => {
+    dispatch(add(restaurant))
+    dispatch(open())
+  }
+
   const [showModal, setShowModal] = useState(false)
 
   return (
     <>
       <Card>
-        <img src={foto} />
-        <Title>{nome}</Title>
-        <Description>{getDescription(descricao)}</Description>
+        <img src={restaurant.foto} />
+        <Title>{restaurant.nome}</Title>
+        <Description>{getDescription(restaurant.descricao)}</Description>
         <Button
           to=""
           type={'button'}
@@ -60,13 +68,21 @@ const Products = ({ foto, preco, nome, descricao, porcao }: Props) => {
         }}
       >
         <ModalContainer>
-          <ModalImage src={foto} />
+          <ModalImage src={restaurant.foto} />
           <ModalContent>
-            <h2>{nome}</h2>
-            <p>{descricao}</p>
-            <span>{porcao}</span>
-            <Button type={'button'} title={''} to={'/teste'}>
-              <>Adicionar ao carrinho - {formatPrice(preco)}</>
+            <h2>{restaurant.nome}</h2>
+            <p>{restaurant.descricao}</p>
+            <span>{restaurant.porcao}</span>
+            <Button
+              type={'button'}
+              title={''}
+              to={'/teste'}
+              onClick={() => {
+                addCart()
+                setShowModal(false)
+              }}
+            >
+              <>Adicionar ao carrinho - {formatPrice(restaurant.preco)}</>
             </Button>
           </ModalContent>
           <CloseButton>

@@ -26,13 +26,7 @@ const ProductsList = () => {
           <List>
             {foods?.cardapio.map((food) => (
               <li key={food.id}>
-                <Products
-                  foto={food.foto}
-                  preco={food.preco}
-                  nome={food.nome}
-                  descricao={food.descricao}
-                  porcao={food.porcao}
-                />
+                <Products restaurant={food} restaurants={foods} />
               </li>
             ))}
           </List>

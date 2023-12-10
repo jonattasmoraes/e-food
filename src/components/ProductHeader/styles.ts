@@ -1,31 +1,38 @@
 import styled from 'styled-components'
+import { colors } from '../../styles'
 
-import headerImage from '../../assets/images/fundo.png'
-
-export const HeaderContainer = styled.header`
-  background-image: url(${headerImage});
-  width: 100%;
+export const Header = styled.header`
   height: 186px;
-  background-size: auto 100%;
-
-  img {
-    margin-top: 63px;
-  }
-
-  .link {
-    cursor: pointer;
-    color: #000000;
-  }
-`
-
-export const ProductText = styled.p`
-  font-size: 18px;
+  width: 100%;
+  background-color: ${colors.orange};
   font-weight: 900;
-  line-height: 21px;
-  margin-top: 82px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
 `
-export const ProductContainer = styled.div`
+export const HeaderContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+`
+
+export const LinkHome = styled.a`
+  text-decoration: none;
+  color: #000;
+  cursor: pointer;
+`
+
+export const Logo = styled.img`
+  width: 125px;
+  height: 57px;
+`
+
+export const CartButton = styled.button`
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 21px;
+  cursor: pointer;
 `

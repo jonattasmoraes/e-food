@@ -1,9 +1,9 @@
-import ProductHero from '../../components/ProductHero'
 import ProductList from '../../components/ProductsList'
 import ProductHeader from '../../components/ProductHeader'
 
 import { useGetMenuQuery } from '../../services/api'
 import { useParams } from 'react-router-dom'
+import ProductBanner from '../../components/ProductBanner'
 
 const ProductMenu = () => {
   const { id } = useParams()
@@ -17,7 +17,11 @@ const ProductMenu = () => {
   return (
     <>
       <ProductHeader />
-      <ProductHero />
+      <ProductBanner
+        capa={foods.capa}
+        tipo={foods.tipo}
+        titulo={foods.titulo}
+      />
       <ProductList />
     </>
   )
