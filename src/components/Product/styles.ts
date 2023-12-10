@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { colors } from '../../styles'
+import { breakpoints, colors } from '../../styles'
 
 export const Card = styled.div`
   display: flex;
@@ -20,6 +20,26 @@ export const Card = styled.div`
 
   button {
     width: 100%;
+  }
+
+  @media (max-width: ${breakpoints.desktop}) {
+    max-width: 600px;
+    width: 100%;
+
+    img {
+      width: 600px;
+      width: 100%;
+    }
+  }
+
+  @media (max-width: ${breakpoints.tablet}) {
+    max-width: 400px;
+    width: 100%;
+
+    img {
+      width: 400px;
+      width: 100%;
+    }
   }
 `
 

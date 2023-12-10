@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { colors } from '../../styles'
+import { breakpoints, colors } from '../../styles'
 
 export const Header = styled.header`
   height: 186px;
@@ -17,14 +17,34 @@ export const HeaderContainer = styled.div`
 `
 
 export const LinkHome = styled.a`
-  text-decoration: none;
   color: #000;
   cursor: pointer;
+
+  @media (max-width: ${breakpoints.mobile}) {
+    display: none;
+
+    &.visible {
+      display: flex;
+    }
+  }
 `
 
 export const Logo = styled.img`
   width: 125px;
   height: 57px;
+  display: none;
+
+  @media (max-width: ${breakpoints.mobile}) {
+    &.visible {
+      display: flex;
+    }
+  }
+
+  @media (min-width: ${breakpoints.mobile}) {
+    &.invisible {
+      display: flex;
+    }
+  }
 `
 
 export const CartButton = styled.button`

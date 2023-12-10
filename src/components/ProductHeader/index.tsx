@@ -23,7 +23,10 @@ const ProductHeader = () => {
         <Link to="/">
           <LinkHome>Restaurantes</LinkHome>
         </Link>
-        <Logo src={logo}></Logo>
+        <Link to="/">
+          <Logo className="visible" src={logo}></Logo>
+        </Link>
+        <Logo className="invisible" src={logo}></Logo>
         <CartButton onClick={openCart}>
           {items.length} produto(s) no carrinho
         </CartButton>

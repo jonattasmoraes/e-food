@@ -7,6 +7,12 @@ export const colors = {
   red: '#E66767'
 }
 
+export const breakpoints = {
+  desktop: '1024px',
+  tablet: '900px',
+  mobile: '768px'
+}
+
 export const GlobalCss = createGlobalStyle`
   *{
       margin: 0;
@@ -25,5 +31,9 @@ export const GlobalCss = createGlobalStyle`
   max-width: 1024px;
   margin: 0 auto;
   width: 100%;
+
+  @media (max-width: ${breakpoints.desktop}) {
+    max-width: 90%;
+  }
 }
 `

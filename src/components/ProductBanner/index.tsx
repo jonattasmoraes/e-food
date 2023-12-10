@@ -1,7 +1,5 @@
 import { Banner, Infos } from './styles'
 
-import { Restaurants } from '../../pages/Home'
-
 type Props = {
   capa: string
   tipo: string

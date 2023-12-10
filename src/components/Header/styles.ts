@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { colors } from '../../styles'
+import { breakpoints, colors } from '../../styles'
 
 export const Image = styled.div`
   width: 100%;
@@ -25,4 +25,8 @@ export const Title = styled.h1`
   text-align: center;
   padding-top: 140px;
   color: ${colors.red};
+
+  @media (max-width: ${breakpoints.tablet}) {
+    font-size: 24px;
+  }
 `
