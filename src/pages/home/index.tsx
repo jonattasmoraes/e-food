@@ -1,6 +1,8 @@
 import CardsList from '../../components/CardsList'
 import Header from '../../components/Header'
 
+import { useGetRestaurantsQuery } from '../../services/api'
+
 export type Restaurants = {
   id: number
   titulo: string
@@ -22,10 +24,16 @@ export type MenuItem = {
 }
 
 const Home = () => {
+  const { data: restaurants } = useGetRestaurantsQuery()
+
+  if (!restaurants) {
+    return <h3>Carregando...</h3>
+  }
+
   return (
     <>
       <Header />
-      <CardsList />
+      <CardsList restaurants={restaurants} />
     </>
   )
 }

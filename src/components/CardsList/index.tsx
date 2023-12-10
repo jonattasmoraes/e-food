@@ -1,16 +1,12 @@
-import { useEffect, useState } from 'react'
-import { Restaurants } from '../../pages/home'
+import { Restaurants } from '../../pages/Home'
 import CardHome from '../Cards'
 import { List, ListContainer } from './styles'
 
-const CardsList = () => {
-  const [restaurants, setRestaurants] = useState<Restaurants[]>([])
-  useEffect(() => {
-    fetch('https://fake-api-tau.vercel.app/api/efood/restaurantes')
-      .then((response) => response.json())
-      .then((response) => setRestaurants(response))
-  }, [])
+type Props = {
+  restaurants: Restaurants[]
+}
 
+const CardsList = ({ restaurants }: Props) => {
   return (
     <>
       <div className="container">

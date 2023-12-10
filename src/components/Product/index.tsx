@@ -53,7 +53,11 @@ const Products = ({ foto, preco, nome, descricao, porcao }: Props) => {
       </Card>
       <ModalOverlay
         className={showModal ? 'visible' : ''}
-        onClick={() => setShowModal(false)}
+        onClick={(e) => {
+          if (e.target === e.currentTarget) {
+            setShowModal(false)
+          }
+        }}
       >
         <ModalContainer>
           <ModalImage src={foto} />
