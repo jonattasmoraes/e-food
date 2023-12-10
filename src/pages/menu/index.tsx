@@ -1,4 +1,4 @@
-import ProductList from '../../components/ProductsList'
+import ProductList from '../../containers/ProductsList'
 import ProductHeader from '../../components/ProductHeader'
 
 import { useGetMenuQuery } from '../../services/api'

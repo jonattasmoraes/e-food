@@ -1,4 +1,4 @@
-import Products from '../Product'
+import Products from '../../components/Product'
 import { List, ListContainer } from './styles'
 
 import { Restaurants } from '../../pages/Home'

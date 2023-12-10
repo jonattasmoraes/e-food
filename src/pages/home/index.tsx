@@ -1,4 +1,4 @@
-import CardsList from '../../components/CardsList'
+import CardsList from '../../containers/ProductsList/CardsList'
 import Header from '../../components/Header'
 
 import { useGetRestaurantsQuery } from '../../services/api'

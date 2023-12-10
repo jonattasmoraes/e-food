@@ -1,5 +1,5 @@
-import { Restaurants } from '../../pages/Home'
-import CardHome from '../Cards'
+import { Restaurants } from '../../../pages/Home'
+import CardHome from '../../../components/Cards'
 import { List, ListContainer } from './styles'
 
 type Props = {
