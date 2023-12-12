@@ -83,6 +83,11 @@ export const ModalContainer = styled.div`
   padding: 32px;
   position: relative;
   display: flex;
+
+  @media (max-width: ${breakpoints.tablet}) {
+    display: block;
+    max-width: 80%;
+  }
 `
 
 export const ModalImage = styled.img`
@@ -90,10 +95,16 @@ export const ModalImage = styled.img`
   height: 280px;
   object-fit: cover;
   object-position: center;
+
+  @media (max-width: ${breakpoints.tablet}) {
+    max-width: 800px;
+    width: 100%;
+  }
 `
 
 export const ModalContent = styled.div`
   margin-left: 20px;
+  display: block;
 
   h2 {
     color: ${colors.white};
