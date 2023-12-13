@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
-import { MenuItem, Restaurants } from '../../pages/Home'
+import { MenuItem } from '../../pages/Home'
 
 type CartState = {
   items: MenuItem[]
@@ -19,7 +19,10 @@ const cartSlice = createSlice({
       state.items.push(action.payload)
     },
     remove: (state, action: PayloadAction<number>) => {
-      state.items = state.items.filter((item) => item.id !== action.payload)
+      const index = state.items.findIndex((item) => item.id === action.payload)
+      if (index !== -1) {
+        state.items.splice(index, 1)
+      }
     },
     open: (state) => {
       state.isOpen = true
