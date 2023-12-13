@@ -1,9 +1,9 @@
-import ProductList from '../../containers/ProductsList'
-import ProductHeader from '../../components/ProductHeader'
+import ProductList from '../../containers/Products'
+import ProductHeader from '../../components/MenuHeader'
 
 import { useGetMenuQuery } from '../../services/api'
 import { useParams } from 'react-router-dom'
-import ProductBanner from '../../components/ProductBanner'
+import ProductBanner from '../../components/Banner'
 
 const ProductMenu = () => {
   const { id } = useParams()

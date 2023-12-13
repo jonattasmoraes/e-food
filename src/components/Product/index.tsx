@@ -1,4 +1,5 @@
 import { useDispatch } from 'react-redux'
+
 import { Card, Description, Title } from './styles'
 import Button from '../Button'
 import { useState } from 'react'
