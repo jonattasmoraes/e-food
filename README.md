@@ -6,8 +6,8 @@ eFood, a project developed as part of the training at the EBAC (Escola Britânic
 
 ### Technologies
 <p display="inline-block">
-  <img width="48" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/react-plain.svg"/>
-  <img width="48" src="[https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-plain.svg"/>
+  <img align="center" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-plain.svg">
+  <img align="center" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-plain.svg">
 </p>
                                                                                                   
 ### Development Tools
