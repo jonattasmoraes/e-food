@@ -112,6 +112,10 @@ export const ModalContent = styled.div`
     font-size: 18px;
     line-height: 21px;
     margin-bottom: 16px;
+
+    @media (max-width: ${breakpoints.tablet}) {
+      margin-top: 8px;
+    }
   }
 
   p {
