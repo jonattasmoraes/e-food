@@ -1,7 +1,5 @@
 <h1 align="center">E-food</h1>
 
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/9a629b279b6b4498abb76d0dcb3c6b42)](https://app.codacy.com/gh/jonattasmoraes/e-food/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
-
 ##  About this project
 
 eFood, a project developed as part of the training at the EBAC (Escola Britânica de Artes e Tecnologia), utilizes technologies such as React, TypeScript, React Router DOM, Style Components, and Redux. The project aims to create an intuitive online food purchasing experience.
@@ -9,7 +7,7 @@ eFood, a project developed as part of the training at the EBAC (Escola Britânic
 ### Technologies
 <p display="inline-block">
   <img align="center" height="30" width="40" src="https://github.com/tandpfun/skill-icons/blob/main/icons/React-Dark.svg">
-  <img align="center" height="30" width="40" src="https://github.com/tandpfun/skill-icons/blob/main/icons/React-Dark.svg">
+  <img align="center" height="30" width="40" src="https://github.com/tandpfun/skill-icons/blob/main/icons/typescript-Dark.svg">
 </p>
                                                                                                   
 ### Development Tools
