@@ -1,20 +1,11 @@
 import { useDispatch } from 'react-redux'
-import {
-  Card,
-  CloseButton,
-  Description,
-  ModalContainer,
-  ModalContent,
-  ModalImage,
-  ModalOverlay,
-  Title
-} from './styles'
+import { Card, Description, Title } from './styles'
 import Button from '../Button'
-import closeImg from '../../assets/images/close.png'
 import { useState } from 'react'
 
 import { add, open } from '../../store/reducers/cart'
 import { MenuItem, Restaurants } from '../../pages/Home'
+import Modal from '../Modal'
 
 type Props = {
   restaurant: MenuItem
@@ -34,7 +25,7 @@ export const getDescription = (description: string) => {
   }
 }
 
-const Products = ({ restaurant, restaurants }: Props) => {
+const Products = ({ restaurant }: Props) => {
   const dispatch = useDispatch()
 
   const addCart = () => {
@@ -59,37 +50,12 @@ const Products = ({ restaurant, restaurants }: Props) => {
           <>Adicionar ao carrinho</>
         </Button>
       </Card>
-      <ModalOverlay
-        className={showModal ? 'visible' : ''}
-        onClick={(e) => {
-          if (e.target === e.currentTarget) {
-            setShowModal(false)
-          }
-        }}
-      >
-        <ModalContainer>
-          <ModalImage src={restaurant.foto} />
-          <ModalContent>
-            <h2>{restaurant.nome}</h2>
-            <p>{restaurant.descricao}</p>
-            <span>{restaurant.porcao}</span>
-            <Button
-              type={'button'}
-              title={''}
-              to={'/teste'}
-              onClick={() => {
-                addCart()
-                setShowModal(false)
-              }}
-            >
-              <>Adicionar ao carrinho - {formatPrice(restaurant.preco)}</>
-            </Button>
-          </ModalContent>
-          <CloseButton>
-            <img src={closeImg} onClick={() => setShowModal(false)} />
-          </CloseButton>
-        </ModalContainer>
-      </ModalOverlay>
+      <Modal
+        showModal={showModal}
+        onClose={() => setShowModal(false)}
+        restaurant={restaurant}
+        addCart={addCart}
+      />
     </>
   )
 }
