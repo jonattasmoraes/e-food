@@ -1,9 +1,22 @@
-# Getting Started with Create React App
+<h1 align="center">E-food</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+##  About this project
 
-## Available Scripts
+eFood, a project developed as part of the training at the EBAC (Escola Britânica de Artes e Tecnologia), utilizes technologies such as React, TypeScript, React Router DOM, Style Components, and Redux. The project aims to create an intuitive online food purchasing experience.
 
+### Technologies
+<p display="inline-block">
+  <img width="48" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/react-plain.svg"/>
+  <img width="48" src="[https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-plain.svg"/>
+</p>
+                                                                                                  
+### Development Tools
+
+<p display="inline-block">
+  <img width="48" src="https://static.wikia.nocookie.net/logopedia/images/e/ec/Microsoft_Visual_Studio_2022.svg" alt="vs-logo"/>
+</p>
+
+## Running
 In the project directory, you can run:
 
 ### `npm start`
@@ -33,14 +46,14 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 **Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## References
+[About issues - GitHub Docs](https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+[About wikis - GitHub Docs](https://docs.github.com/en/communities/documenting-your-project-with-wikis/about-wikis)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+[About discussions - GitHub Docs](https://docs.github.com/en/discussions/collaborating-with-your-community-using-discussions/about-discussions)
 
-## Learn More
+[Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+[React documentation](https://reactjs.org/).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
