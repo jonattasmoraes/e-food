@@ -1,6 +1,5 @@
 import { Provider } from 'react-redux'
 import { BrowserRouter } from 'react-router-dom'
-import { SpeedInsights } from '@vercel/speed-insights/next'
 
 import { GlobalCss } from './styles'
 import Rotas from './routs'
@@ -19,7 +18,6 @@ function App() {
         <Rotas />
         <Footer />
         <Cart />
-        <SpeedInsights />
       </BrowserRouter>
     </Provider>
   )
