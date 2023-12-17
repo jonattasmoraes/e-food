@@ -1,8 +1,17 @@
 import styled from 'styled-components'
-import { colors } from '../../styles'
-import { ButtonContainer } from '../Button/styles'
 
-import lixeira from '../../assets/images/lixeira.png'
+import close from '../../assets/images/lixeira.png'
+import { colors } from '../../styles'
+
+export const Overlay = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0.7;
+`
 
 export const CartContainer = styled.div`
   position: fixed;
@@ -19,80 +28,141 @@ export const CartContainer = styled.div`
   }
 `
 
-export const Overlay = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #000;
-  opacity: 0.8;
-`
-
-export const SideBar = styled.aside`
-  background-color: ${colors.red};
+export const Sidebar = styled.aside`
+  color: ${colors.red};
   z-index: 1;
-  padding: 32px 8px;
+  background-color: ${colors.red};
   max-width: 360px;
   width: 100%;
+  padding: 40px 16px 0 16px;
 
-  ${ButtonContainer} {
-    max-width: 100%;
+  &.is-closed {
+    display: none;
+  }
+
+  label {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    color: ${colors.orange};
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  input {
+    background-color: ${colors.orange};
+    height: 32px;
+    padding: 8px;
+    border: none;
     width: 100%;
+    margin-bottom: 8px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    color: black;
+
+    &.error {
+      border: 2px solid red;
+      color: red;
+    }
+  }
+
+  p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: ${colors.orange};
+    margin-bottom: 16px;
+  }
+`
+export const Title = styled.h3`
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  color: ${colors.orange};
+  margin-bottom: 16px;
+`
+
+export const Paragraph = styled.p`
+  font-size: 14px;
+  line-height: 22px;
+  color: ${colors.white};
+  text-align: center;
+`
+
+export const InputGroup = styled.div`
+  display: flex;
+  gap: 34px;
+
+  #cardNumber {
+    width: 228px;
   }
 `
 
-export const Prices = styled.div`
-  color: ${colors.orange};
+export const Prices = styled.p`
+  font-weight: bold;
+  font-size: 14px;
+  color: ${colors.white};
+  margin-bottom: 24px;
+  margin-top: 16px;
+  margin-top: 40px;
   display: flex;
   justify-content: space-between;
-  margin-top: 40px;
-  margin-bottom: 16px;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 16px;
-`
 
+  span {
+    color: ${colors.white};
+  }
+`
 export const CartItem = styled.li`
   display: flex;
-  background-color: ${colors.orange};
-  color: ${colors.red};
-  padding: 8px 8px 12px 8px;
-  margin-bottom: 16px;
+  gap: 16px;
+  border-bottom: 1px solid ${colors.white};
+  padding: 8px;
   position: relative;
+  background-color: ${colors.orange};
+  margin: 8px 0;
 
   img {
-    width: 80px;
     height: 80px;
+    width: 80px;
     object-fit: cover;
   }
 
-  div {
-    margin-left: 8px;
-
-    h3 {
-      font-weight: 900;
-      font-size: 18px;
-      line-height: 21px;
-    }
-
-    span {
-      display: block;
-      font-weight: 400;
-      font-size: 14px;
-      line-height: 22px;
-      margin-top: 16px;
-    }
+  h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 16px;
   }
+
+  span {
+    display: block;
+    font-size: 14px;
+  }
+
   button {
-    background-image: url(${lixeira});
+    background-image: url(${close});
     width: 16px;
     height: 16px;
     border: none;
-    background-color: transparent;
+    cursor: pointer;
     position: absolute;
     bottom: 8px;
     right: 8px;
-    cursor: pointer;
+  }
+`
+
+export const Button = styled.button`
+  width: 100%;
+  padding: 4px;
+  border: none;
+  background-color: ${colors.orange};
+  color: ${colors.red};
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 8px;
+
+  &.margin-top {
+    margin-top: 24px;
   }
 `
