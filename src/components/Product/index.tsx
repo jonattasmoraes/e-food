@@ -24,6 +24,7 @@ export const getDescription = (description: string) => {
   if (description.length > 240) {
     return description.slice(0, 240) + '...'
   }
+  return description
 }
 
 const Products = ({ restaurant }: Props) => {
